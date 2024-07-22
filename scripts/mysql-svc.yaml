@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: wordpress-mysql
+  label:
+    app: wordpress
+  namespace: akash
+spec:
+  selector:
+    app: wordpress
+    tier: mysql
+  clusterIp: None
+  ports:
+    - port:  3306
+
+  
